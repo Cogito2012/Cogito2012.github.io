@@ -3,21 +3,22 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Bao's Blog
-subtitle:
+title: Cogito2012's Blog
+subtitle: 不难，要你干嘛？！
 description: 不难，要你干嘛？！
 author: Wentao Bao
-language:
-timezone:
+language: zh-Hans
+timezone: Wentao Bao
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: https://github.com/Cogito2012
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 
 # Directory
+post_asset_floder: true
 source_dir: source
 public_dir: public
 tag_dir: tags
@@ -41,12 +42,29 @@ highlight:
   enable: true
   line_number: true
   auto_detect: true
-  tab_replace:
+  tab_replace: ' '
 
 # Category & Tag
 default_category: uncategorized
 category_map:
 tag_map:
+
+# Archives
+## 2: Enable pagination
+## 1: Disable pagination
+## 0: Fully Disable
+archive: 1
+category: 1
+tag: 1
+
+# Server
+## Hexo uses Connect as a server
+## You can customize the logger format as defined in
+## http://www.senchalabs.org/connect/logger.html
+port: 4000
+server_ip: localhost
+logger: false
+logger_format: dev
 
 # Date / Time format
 ## Hexo uses Moment.js to parse and display date
@@ -64,12 +82,6 @@ pagination_dir: page
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 theme: yilia
-
-# Header
-menu:
-  主页: /
-  所有文章: /archives
-  # 随笔: /tags/随笔
   
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
