@@ -24,3 +24,37 @@ RNN的关键点之一就是将先前的信息连接到当前的任务上对当�
 
 ## LSTM基本原理
 LSTM单元设计了类似于水阀门的一种“门”结构来控制网络的信息流，实现信息的长期记忆和短期激活，从而解决长期依赖问题。LSTM单元包括输入节点、输入门、内部状态、遗忘门、输出门组成，如图所示为一个基本的LSTM单元的示意图。
+![LSTM Model](http://cogito2012.github.io/assets/img/LSTM.png)
+多个这样的LSTM单元顺序连接，就构成了LSTM网络。看着挺复杂，但其实分解来看也不难。首先最上面流水线通过矩阵内积“×”的方式实现遗忘门，如图3，即通过乘以0或者1使得上一时刻的记忆信息C(t-1)被遗忘或者保留。这个结构决定了从上一时刻状态C(t-1)中丢弃什么信息。
+![LSTM_forgetGate](http://cogito2012.github.io/assets/img/LSTM_forgetGate.png)
+然后需要决定当前的状态C(t)中需要加入什么样的新信息。如图4，包含两部分，一个是使用sigmoid激活函数的输入门，一个是使用tanh激活函数的内部状态，这两个结构输出后做内积相乘，也就是丢弃部分旧输入信息h(t-1)，产生当前新信息的状态。
+![LSTM_InputGate](http://cogito2012.github.io/assets/img/LSTM_InputGate.png)
+然后将当前状态C(t)与旧状态C(t-1)相加得到当前的输出状态C(t)，如图5。
+![LSTM_Status](http://cogito2012.github.io/assets/img/LSTM_Status.png)
+最后，我们需要确定什么样的输出。如图6，用sigmoid函数来确定当前输入的哪个部分将输出出去。接着用tanh将当前状态C(t)哪些输出到下一时刻的输入，最后用内积相乘确定最终的输出。
+![LSTM_Output](http://cogito2012.github.io/assets/img/LSTM_Output.png)
+综合上述分析，就可以得出一个现在常用的标准LSTM的前向训练过程：
+![Formular](http://cogito2012.github.io/assets/img/Formular.png)
+LSTM的训练算法仍然是使用梯度下降算法BPTT(Back propagation through time)，详细的数学推导过程比较复杂，只用一个小的算例体验了下这个训练过程，具体细节不作详述，算例过程可以参考文章[3]。
+
+## LSTM的其它变体
+上述介绍的只是使用较多的一个标准LSTM，在不同的实际应用中会有不同的变体形式。比如加入窥视孔连接(peephole connection)的LSTM如图7所示：
+![peepholeLSTM](http://cogito2012.github.io/assets/img/peepholeLSTM.png)
+还有改动较大并且使用也非常多的LSTM变体门限循环单元GRU(Gated Recurrent Unit)，如图8，将遗忘门与输入门合并为单一的更新门，以及其它细节改动。这种GRU比标准LSTM模型更简单。
+![GRU](http://cogito2012.github.io/assets/img/GRU.png)
+LSTM的其它变种还有很多，Jozefowicz等人在超过一万种RNN的架构上进行了对比测试，发现在特定的深度学习任务上，有许多RNN结构比LSTM表现更好。
+
+## RNN在目标检测方面的应用
+由于我本人关注较多目标检测与识别方面的进展，在学习了RNN和LSTM之际也了解了下RNN在目标检测方面的应用案例。RNN在获取目标上下文信息方面相比于CNN有独特的优势，下面是相关文章：
+
+- Bell S, Zitnick C L, Bala K, et al. Inside-outside net: Detecting objects in context with skip pooling and recurrent neural networks[J]. arXiv preprint arXiv:1512.04143, 2015.
+ &nbsp; &nbsp; &nbsp; &nbsp;用skip pooling和 RNNlayer，在多尺度的feature map 上做roi pooling，最后一个feature map是通过rnn得到。
+
+- Stewart R, Andriluka M. End-to-end people detection in crowded scenes[J]. arXiv preprint arXiv:1506.04878, 2015. 
+&nbsp; &nbsp; &nbsp; &nbsp;使用LSTM实现detection。
+
+- Li J, Wei Y, Liang X, et al. Attentive Contexts for Object Detection[J]. arXiv preprint arXiv:1603.07415, 2016.
+&nbsp; &nbsp; &nbsp; &nbsp;文章利用local(多尺度的cnn特征)和global(LSTM生成)来做目标识别。
+
+- Liang M, Hu X. Recurrent convolutional neural network for object recognition[C]//Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition. 2015: 3367-3375.
+&nbsp; &nbsp; &nbsp; &nbsp;每一层卷积后用RNN，文章引用量不大。
