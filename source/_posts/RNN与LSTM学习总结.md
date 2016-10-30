@@ -1,3 +1,4 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 #  RNN与LSTM学习总结
 
 ------
@@ -16,7 +17,7 @@ RNN全称是Recurrent Neural Networks, 循环神经网络，近几年来在深度学习领域内的研究
 
 ## RNN要解决的问题
 人类并非时刻都从空白的大脑开始学习和认知事物，当你阅读这篇文章时，你就是在运用以前对这些词句的含义理解等先验知识来作出认知判断，就是说神经网络应当具有信息记忆能力，也就是当前时刻的输出除了与当前输入有关，还与之前的输出有关。形象地图示表示为下图左边这样，按序列展开为右边这样。
-![RNN Model](https://www.zybuluo.com/static/img/logo.png)
+![RNN Model](https://github.com/Cogito2012/Cogito2012.github.io/blob/hexo/source/img1029/RNN%E6%A8%A1%E5%9E%8B%E7%A4%BA%E6%84%8F%E5%9B%BE.png)
 那么问题来了，传统的马尔科夫链比如HMM就是解决这种具有时序依赖关系的模型啊。但是研究人员发现，当可能的隐层状态空间增长较大时，状态转移矩阵计算量呈指数式增长，使得处理的问题规模十分有限，无法处理长时间或长状态序列前后依赖的问题。
 
 ## 标准RNN存在的问题
