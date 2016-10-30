@@ -80,6 +80,6 @@ LSTM的其它变种还有很多，Jozefowicz等人在超过一万种RNN的架构
 &nbsp; &nbsp; &nbsp; &nbsp;每一层卷积后用RNN，文章引用量不大。
 
 ## 参考文献
-[^code]: Lipton Z C, Berkowitz J, Elkan C. A critical review of recurrent neural networks for sequence learning[J]. arXiv preprint arXiv:1506.00019, 2015.
-[^code]: Shi Yan. Understanding LSTM and its diagrams. [N/OL] https://medium.com/@shiyan/understanding-lstm-and-its-diagrams-37e2f46f1714#.txbyrhd0j.
-[^code]: Aidan Gomez. Backpropogating an LSTM: A Numerical Example.[N/OL] https://medium.com/@aidangomez/let-s-do-this-f9b699de31d9#.qygi8z4wx. 
+[1]. Lipton Z C, Berkowitz J, Elkan C. A critical review of recurrent neural networks for sequence learning[J]. arXiv preprint arXiv:1506.00019, 2015.
+[2]. Shi Yan. Understanding LSTM and its diagrams. [N/OL] https://medium.com/@shiyan/understanding-lstm-and-its-diagrams-37e2f46f1714#.txbyrhd0j.
+[3]. Aidan Gomez. Backpropogating an LSTM: A Numerical Example.[N/OL] https://medium.com/@aidangomez/let-s-do-this-f9b699de31d9#.qygi8z4wx. 
