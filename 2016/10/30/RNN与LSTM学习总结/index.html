@@ -16,7 +16,7 @@ LSTM����������
 RNN��Ŀ�����ⷽ����Ӧ��
 
 
-RNN��ʲôRNNȫ����Recurrent Neural Networks, ѭ���������磬��������������ѧϰ�����ڵ��о��ȶȺ���ѷ��������">
+RNN��ʲôRNNȫ����Recurrent Neural Networks, ѭ���������磬��������������ѧϰ�����ڵ��о��ȶȺ���ѷ���������">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Cogito2012's Blog">
 <meta property="og:url" content="https://github.com/Cogito2012/2016/10/30/RNN与LSTM学习总结/index.html">
@@ -32,13 +32,9 @@ LSTM����������
 RNN��Ŀ�����ⷽ����Ӧ��
 
 
-RNN��ʲôRNNȫ����Recurrent Neural Networks, ѭ���������磬��������������ѧϰ�����ڵ��о��ȶȺ���ѷ��������">
-<meta property="og:image" content="https://github.com/Cogito2012/Cogito2012.github.io/blob/hexo/source/img1029/RNN%E6%A8%A1%E5%9E%8B%E7%A4%BA%E6%84%8F%E5%9B%BE.png">
-<meta property="og:image" content="https://www.zybuluo.com/static/img/toolbar-editor.png">
-<meta property="og:image" content="https://www.zybuluo.com/static/img/toolbar-manager.jpg">
-<meta property="og:image" content="https://www.zybuluo.com/static/img/toolbar-reader.jpg">
-<meta property="og:image" content="https://www.zybuluo.com/static/img/file-list.png">
-<meta property="og:updated_time" content="2016-10-30T03:14:22.184Z">
+RNN��ʲôRNNȫ����Recurrent Neural Networks, ѭ���������磬��������������ѧϰ�����ڵ��о��ȶȺ���ѷ���������">
+<meta property="og:image" content="http://cogito2012.github.io/assets/img/RNN.png">
+<meta property="og:updated_time" content="2016-10-30T03:39:01.088Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Cogito2012's Blog">
 <meta name="twitter:description" content="RNN��LSTMѧϰ�ܽ�
@@ -52,8 +48,8 @@ LSTM����������
 RNN��Ŀ�����ⷽ����Ӧ��
 
 
-RNN��ʲôRNNȫ����Recurrent Neural Networks, ѭ���������磬��������������ѧϰ�����ڵ��о��ȶȺ���ѷ��������">
-<meta name="twitter:image" content="https://github.com/Cogito2012/Cogito2012.github.io/blob/hexo/source/img1029/RNN%E6%A8%A1%E5%9E%8B%E7%A4%BA%E6%84%8F%E5%9B%BE.png">
+RNN��ʲôRNNȫ����Recurrent Neural Networks, ѭ���������磬��������������ѧϰ�����ڵ��о��ȶȺ���ѷ���������">
+<meta name="twitter:image" content="http://cogito2012.github.io/assets/img/RNN.png">
   
   
     <link rel="icon" href="/favicon.png">
@@ -226,8 +222,7 @@ RNN��ʲôRNNȫ����Recurrent Neural Networks, ѭ�������
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></p>
-<h1 id="RNN��LSTMѧϰ�ܽ�"><a href="#RNN��LSTMѧϰ�ܽ�" class="headerlink" title="RNN��LSTMѧϰ�ܽ�"></a>RNN��LSTMѧϰ�ܽ�</h1><hr>
+        <h1 id="RNN��LSTMѧϰ�ܽ�"><a href="#RNN��LSTMѧϰ�ܽ�" class="headerlink" title="RNN��LSTMѧϰ�ܽ�"></a>RNN��LSTMѧϰ�ܽ�</h1><hr>
 <blockquote>
 <ul>
 <li>RNN��ʲô</li>
@@ -240,82 +235,9 @@ RNN��ʲôRNNȫ����Recurrent Neural Networks, ѭ�������
 </blockquote>
 <h2 id="RNN��ʲo"><a href="#RNN��ʲo" class="headerlink" title="RNN��ʲô"></a>RNN��ʲô</h2><p>RNNȫ����Recurrent Neural Networks, ѭ���������磬��������������ѧϰ�����ڵ��о��ȶȺ���ѷ��������������CNN�������ó��ھ�ʱ������������������������Ǳ�ڵ�ģʽ��������ʶ�𡢻������롢�䷨���������򷢻��˾޴������ã�ͬʱ��ͼ����Ƶ�������棬Ҳ�нϺõı��֡���LSTM��ָ�����ڼ������磬����һ�����и����ŵ��㷺ʹ�õ�RNN���磬����LSTM֮�⻹��GRU�ȸ������֡������ﵥ����LSTMԭ����һ���ܽᡣ</p>
 <p>ѧϰLSTMһ�㶼�Ǵ�RNN������ʼ�����������Ī���ڶ��׶���ѧ��Alex Graves��RNNר����Supervised Sequence Labelling with Recurrent Neural Networks���Լ�����LSTM������Felix Gers�Ĳ�ʿ���ġ�Long short-memory in recurrent neural networks��,�������������ݶ���100��ҳ��û�п������ǿ���2015��UCSD��Zachary C.Liptonд��һƪ�������¡�A Critical Review of Recurrent Neural Networks for Sequence Learning���Լ�Colah��һƪblog���� ��Understanding LSTM Networks����</p>
-<h2 id="RNNҪ����������"><a href="#RNNҪ����������" class="headerlink" title="RNNҪ����������"></a>RNNҪ����������</h2><p>���ಢ��ʱ�̶��ӿհ׵Ĵ��Կ�ʼѧϰ����֪��������Ķ���ƪ����ʱ����������������ǰ����Щ�ʾ��ĺ�������������֪ʶ��������֪�жϣ�����˵��������Ӧ��������Ϣ����������Ҳ���ǵ�ǰʱ�̵����������뵱ǰ�����йأ�����֮ǰ�������йء�������ͼʾ��ʾΪ��ͼ����������������չ��Ϊ�ұ�������<br><img src="https://github.com/Cogito2012/Cogito2012.github.io/blob/hexo/source/img1029/RNN%E6%A8%A1%E5%9E%8B%E7%A4%BA%E6%84%8F%E5%9B%BE.png" alt="RNN Model"><br>��ô�������ˣ���ͳ�������Ʒ�������HMM���ǽ������־���ʱ��������ϵ��ģ�Ͱ��������о���Ա���֣������ܵ�����״̬�ռ������ϴ�ʱ��״̬ת�ƾ�����������ָ��ʽ������ʹ�ô�����������ģʮ�����ޣ��޷�������ʱ������״̬����ǰ�����������⡣</p>
+<h2 id="RNNҪ����������"><a href="#RNNҪ����������" class="headerlink" title="RNNҪ����������"></a>RNNҪ����������</h2><p>���ಢ��ʱ�̶��ӿհ׵Ĵ��Կ�ʼѧϰ����֪��������Ķ���ƪ����ʱ����������������ǰ����Щ�ʾ��ĺ�������������֪ʶ��������֪�жϣ�����˵��������Ӧ��������Ϣ����������Ҳ���ǵ�ǰʱ�̵����������뵱ǰ�����йأ�����֮ǰ�������йء�������ͼʾ��ʾΪ��ͼ����������������չ��Ϊ�ұ�������<br><img src="http://cogito2012.github.io/assets/img/RNN.png" alt="RNN Model"><br>��ô�������ˣ���ͳ�������Ʒ�������HMM���ǽ������־���ʱ��������ϵ��ģ�Ͱ��������о���Ա���֣������ܵ�����״̬�ռ������ϴ�ʱ��״̬ת�ƾ�����������ָ��ʽ������ʹ�ô�����������ģʮ�����ޣ��޷�������ʱ������״̬����ǰ�����������⡣</p>
 <h2 id="��׼RNN���ڵ�����"><a href="#��׼RNN���ڵ�����" class="headerlink" title="��׼RNN���ڵ�����"></a>��׼RNN���ڵ�����</h2><p>RNN�Ĺؼ���֮һ���ǽ���ǰ����Ϣ���ӵ���ǰ�������϶Ե�ǰ���ݽ������⣬����Ԥ�����ӡ�The clouds are in the   ���еĺ��ߴ��������׸���������ǰ����cloudsԤ�⵽�������ߴ���sky������ǰ����Ϣ��λ�ü�����Ȼ���㳤��������������һ���󣬱���Ԥ�����ӡ�I grew up in France��(�˴�ʡ��N����)��I speak fluent   �������ߴ���Ԥ������Ҫ����ǰ����Զλ�õ���Ϣ��France�����ƶϴ˴�Ϊ��French����������RNN�ǿ��Դ������ֳ������������ģ�Ȼ����׼��RNNΪ�˴��������ĳ������ڽ���ģ��ѵ��ʱ����ÿ��RNN��Ԫ��Ҫѭ�����Σ������ݶ��½��㷨���׳����ݶȵ���ʧ���⡣���ǣ�LSTM���������������⡣</p>
 <h2 id="LSTM����ԭ��"><a href="#LSTM����ԭ��" class="headerlink" title="LSTM����ԭ��"></a>LSTM����ԭ��</h2><p>LSTM��Ԫ������������ˮ���ŵ�һ�֡��š��ṹ��������������Ϣ����ʵ����Ϣ�ĳ��ڼ����Ͷ��ڼ���Ӷ����������������⡣LSTM��Ԫ���������ڵ㡢�����š��ڲ�״̬�������š����������ɣ���ͼ��ʾΪһ��������LSTM��Ԫ��ʾ��ͼ��</p>
-<p>���������ڿ��������� Cmd Markdown ���߰汾����������ǰ��������ַ���أ�</p>
-<h3 id="Windows-Mac-Linux-oƽ̨�ͻ���"><a href="#Windows-Mac-Linux-oƽ̨�ͻ���" class="headerlink" title="Windows/Mac/Linux ȫƽ̨�ͻ���"></a><a href="https://www.zybuluo.com/cmd/" target="_blank" rel="external">Windows/Mac/Linux ȫƽ̨�ͻ���</a></h3><blockquote>
-<p>�뱣���˷� Cmd Markdown �Ļ�ӭ����ʹ��˵��������׫д�¸��������������������Ҳ��� <i class="icon-file"></i> <strong>���ĸ�</strong> ����ʹ�ÿ��ݼ� <code>Ctrl+Alt+N</code>��</p>
-</blockquote>
-<hr>
-<h2 id="ʲo��-Markdown"><a href="#ʲo��-Markdown" class="headerlink" title="ʲô�� Markdown"></a>ʲô�� Markdown</h2><p>Markdown ��һ�ַ������䡢��д�Ĵ��ı��������ԣ��û�����ʹ����Щ���Ƿ�������С�������������ɼ������������ĵ���Ʃ���������Ķ��������ĵ�����ʹ�ü򵥵ķ��ű��ǲ�ͬ�ı��⣬�ָͬ�Ķ��䣬<strong>����</strong> ���� <em>б��</em> ĳЩ���֣��������ǣ���������</p>
-<h3 id="1-����һ�ݴ�������-Todo-�б�"><a href="#1-����һ�ݴ�������-Todo-�б�" class="headerlink" title="1. ����һ�ݴ������� Todo �б�"></a>1. ����һ�ݴ������� <a href="https://www.zybuluo.com/mdeditor?url=https://www.zybuluo.com/static/editor/md-help.markdown#13-��������-todo-�б�" target="_blank" rel="external">Todo �б�</a></h3><ul>
-<li>[ ] ֧���� PDF ��ʽ�����ĸ�</li>
-<li>[ ] �Ľ� Cmd ��Ⱦ�㷨��ʹ�þֲ���Ⱦ����������ȾЧ��</li>
-<li>[x] ���� Todo �б�����</li>
-<li>[x] �޸� LaTex ��ʽ��Ⱦ����</li>
-<li>[x] ���� LaTex ��ʽ���Ź���</li>
-</ul>
-<h3 id="2-��дһ�������غ㹫ʽ-LaTeX"><a href="#2-��дһ�������غ㹫ʽ-LaTeX" class="headerlink" title="2. ��дһ�������غ㹫ʽ[^LaTeX]"></a>2. ��дһ�������غ㹫ʽ[^LaTeX]</h3><p>$$E=mc^2$$</p>
-<h3 id="3-����һ�δ���-code"><a href="#3-����һ�δ���-code" class="headerlink" title="3. ����һ�δ���[^code]"></a>3. ����һ�δ���[^code]</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@requires_authorization</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">SomeClass</span>:</span></div><div class="line">    <span class="keyword">pass</span></div><div class="line"></div><div class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</div><div class="line">    <span class="comment"># A comment</span></div><div class="line">    <span class="keyword">print</span> <span class="string">'hello world'</span></div></pre></td></tr></table></figure>
-<h3 id="4-��Ч����-����ͼ"><a href="#4-��Ч����-����ͼ" class="headerlink" title="4. ��Ч���� ����ͼ"></a>4. ��Ч���� <a href="https://www.zybuluo.com/mdeditor?url=https://www.zybuluo.com/static/editor/md-help.markdown#7-����ͼ" target="_blank" rel="external">����ͼ</a></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">st=&gt;start: Start</div><div class="line">op=&gt;operation: Your Operation</div><div class="line">cond=&gt;condition: Yes or No?</div><div class="line">e=&gt;end</div><div class="line"></div><div class="line">st-&gt;op-&gt;cond</div><div class="line">cond(yes)-&gt;e</div><div class="line">cond(no)-&gt;op</div></pre></td></tr></table></figure>
-<h3 id="5-��Ч����-����ͼ"><a href="#5-��Ч����-����ͼ" class="headerlink" title="5. ��Ч���� ����ͼ"></a>5. ��Ч���� <a href="https://www.zybuluo.com/mdeditor?url=https://www.zybuluo.com/static/editor/md-help.markdown#8-����ͼ" target="_blank" rel="external">����ͼ</a></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">Alice-&gt;Bob: Hello Bob, how are you?</div><div class="line">Note right of Bob: Bob thinks</div><div class="line">Bob--&gt;Alice: I am good thanks!</div></pre></td></tr></table></figure>
-<h3 id="6-��Ч����-����ͼ"><a href="#6-��Ч����-����ͼ" class="headerlink" title="6. ��Ч���� ����ͼ"></a>6. ��Ч���� <a href="https://www.zybuluo.com/mdeditor?url=https://www.zybuluo.com/static/editor/md-help.markdown#9-����ͼ" target="_blank" rel="external">����ͼ</a></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">title ��Ŀ��������</div><div class="line">section ��Ŀȷ��</div><div class="line">    ��������       :a1, 2016-06-22, 3d</div><div class="line">    �����Ա���     :after a1, 5d</div><div class="line">    ������֤       : 5d</div><div class="line">section ��Ŀʵʩ</div><div class="line">    ��Ҫ����      :2016-07-05  , 5d</div><div class="line">    ��ϸ����      :2016-07-08, 10d</div><div class="line">    ����          :2016-07-15, 10d</div><div class="line">    ����          :2016-07-22, 5d</div><div class="line">section ��������</div><div class="line">    ����: 2d</div><div class="line">    ����: 3d</div></pre></td></tr></table></figure>
-<h3 id="7-���Ʊ���"><a href="#7-���Ʊ���" class="headerlink" title="7. ���Ʊ���"></a>7. ���Ʊ���</h3><table>
-<thead>
-<tr>
-<th>��Ŀ</th>
-<th style="text-align:right">�۸�</th>
-<th style="text-align:center">����</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>������</td>
-<td style="text-align:right">\$1600</td>
-<td style="text-align:center">5</td>
-</tr>
-<tr>
-<td>�ֻ�</td>
-<td style="text-align:right">\$12</td>
-<td style="text-align:center">12</td>
-</tr>
-<tr>
-<td>����</td>
-<td style="text-align:right">\$1</td>
-<td style="text-align:center">234</td>
-</tr>
-</tbody>
-</table>
-<h3 id="8-����ϸ�﷨˵��"><a href="#8-����ϸ�﷨˵��" class="headerlink" title="8. ����ϸ�﷨˵��"></a>8. ����ϸ�﷨˵��</h3><p>��Ҫ�鿴����ϸ���﷨˵�������Բο�����׼���� <a href="https://www.zybuluo.com/mdeditor?url=https://www.zybuluo.com/static/editor/md-help.markdown" target="_blank" rel="external">Cmd Markdown �����﷨�ֲ�</a>�������û����Բο� <a href="https://www.zybuluo.com/mdeditor?url=https://www.zybuluo.com/static/editor/md-help.markdown#cmd-markdown-�߽��﷨�ֲ�" target="_blank" rel="external">Cmd Markdown �߽��﷨�ֲ�</a> �˽������߼����ܡ�</p>
-<p>�ܶ���֮����ͬ������ <em>����������</em> �ı༭������ֻ��ʹ�ü���רע����д�ı����ݣ��Ϳ�������ӡˢ�����Ű���ʽ��ʡȴ�ڼ��̺͹�����֮�������л����������ݺ͸�ʽ���鷳��<strong>Markdown ����������д��ӡˢ�����Ķ�����֮���ҵ���ƽ�⡣</strong> Ŀǰ���Ѿ���Ϊ�����������ļ���������վ GitHub �� �����ʴ���վ StackOverFlow ��������д��ʽ��</p>
-<hr>
-<h2 id="ʲo��-Cmd-Markdown"><a href="#ʲo��-Cmd-Markdown" class="headerlink" title="ʲô�� Cmd Markdown"></a>ʲô�� Cmd Markdown</h2><p>������ʹ�úܶ๤����д Markdown������ Cmd Markdown ������������������֪�ġ����õ� Markdown ���ߡ���û��֮һ ������Ϊ�������ֵ��������������Ǻ���һ������������д������˼����֪ʶ���Լ��Ķ������м��µ�׷�������ǰѶ�����Щ�����Ļ�Ӧ������ Cmd Markdown������һ�Σ����Σ����Σ����������ε������������ߵ����飬���ս����ݻ���һ�� <strong>�༭/����/�Ķ�</strong> Markdown ������ƽ̨�������������κεط����κ�ϵͳ/�豸�Ϲ������������֡�</p>
-<h3 id="1-ʵʱͬ��Ԥ��"><a href="#1-ʵʱͬ��Ԥ��" class="headerlink" title="1. ʵʱͬ��Ԥ��"></a>1. ʵʱͬ��Ԥ��</h3><p>���ǽ� Cmd Markdown ��������һ��Ϊ��������Ϊ<strong>�༭��</strong>���ұ�Ϊ<strong>Ԥ����</strong>���ڱ༭���Ĳ�����ʵʱ����Ⱦ��Ԥ���������鿴���յİ���Ч��������������������һ�����϶���������������һ���������㷨����һ�����Ĺ�����ͬ�����ȼ۵�λ�ã����ᣡ</p>
-<h3 id="2-�༭������"><a href="#2-�༭������" class="headerlink" title="2. �༭������"></a>2. �༭������</h3><p>Ҳ��������һ�� Markdown �﷨�����֣�������ȫ��Ϥ��֮ǰ�������� <strong>�༭��</strong> �Ķ���������һ������ͼ��ʾ�Ĺ�������������ʹ�������ڹ������ϵ�����ʽ�����������Ծɹ�����ʹ�ü��̱��Ǹ�ʽ��������д�������ȡ�</p>
-<p><img src="https://www.zybuluo.com/static/img/toolbar-editor.png" alt="tool-editor"></p>
-<h3 id="3-�༭gʽ"><a href="#3-�༭gʽ" class="headerlink" title="3. �༭ģʽ"></a>3. �༭ģʽ</h3><p>��ȫ���������ķ�ʽ�༭���֣����� <strong>�༭������</strong> ���Ҳ������찴ť���߰��� <code>Ctrl + M</code>���� Cmd Markdown �л��������ı༭ģʽ������һ�����ȼ�����д�����������п��ܻ��������ĵ�Ԫ�ض��Ѿ���Ų��������ˬ��</p>
-<h3 id="4-ʵʱ���z��ĸ�"><a href="#4-ʵʱ���z��ĸ�" class="headerlink" title="4. ʵʱ���ƶ��ĸ�"></a>4. ʵʱ���ƶ��ĸ�</h3><p>Ϊ�˱������ݰ�ȫ��Cmd Markdown �Ὣ��ÿһ�λ��������ݱ������ƶˣ�ͬʱ�� <strong>�༭������</strong> �����Ҳ���ʾ <code>�ѱ���</code> �����������赣�������������������������ߵ��𣬺�Х�����ڱ༭�Ĺ�������ʱ�ر����������߻�������һ�λص� Cmd Markdown ��ʱ������д����</p>
-<h3 id="5-����gʽ"><a href="#5-����gʽ" class="headerlink" title="5. ����ģʽ"></a>5. ����ģʽ</h3><p>�����绷�����ȶ��������¼�¼����һ���ܰ�ȫ������д����ʱ������������ͻȻʧȥ�������ӣ�Cmd Markdown �������л�������ģʽ�������������������ֱ����ڱ��أ�ֱ�������ָ��ٽ����Ǵ������ƶˣ���ʹ�������ָ�ǰ�ر����������ߵ��ԣ�һ��û�����⣬�ȵ��´ο��� Cmd Markdown ��ʱ�������������������߱��������ִ������ƶˡ�������֮�����Ǿ�������Ŭ�����������ֵİ�ȫ��</p>
-<h3 id="6-����������"><a href="#6-����������" class="headerlink" title="6. ����������"></a>6. ����������</h3><p>Ϊ�˱��ڹ��������ĸ壬�� <strong>Ԥ����</strong> �Ķ���������������ʾ�� <strong>����������</strong>��</p>
-<p><img src="https://www.zybuluo.com/static/img/toolbar-manager.jpg" alt="tool-manager"></p>
-<p>ͨ���������������ԣ�</p>
-<p><i class="icon-share"></i> ����������ǰ���ĸ����ɹ̶����ӣ��������Ϸ���������<br><i class="icon-file"></i> �½�����ʼ׫дһƪ�µ��ĸ�<br><i class="icon-trash"></i> ɾ����ɾ����ǰ���ĸ�<br><i class="icon-cloud"></i> ����������ǰ���ĸ�ת��Ϊ Markdown �ı����� Html ��ʽ��������������<br><i class="icon-reorder"></i> �б������������͹������ĸ嶼�����������鿴������<br><i class="icon-pencil"></i> ģʽ���л� ��ͨ/Vim/Emacs �༭ģʽ</p>
-<h3 id="7-�K�������"><a href="#7-�K�������" class="headerlink" title="7. �Ķ�������"></a>7. �Ķ�������</h3><p><img src="https://www.zybuluo.com/static/img/toolbar-reader.jpg" alt="tool-manager"></p>
-<p>ͨ�� <strong>Ԥ����</strong> ���Ͻǵ� <strong>�Ķ�������</strong>�����Բ鿴��ǰ�ĸ���Ŀ¼����ǿ�Ķ����顣</p>
-<p>�������ϵ�����ͼ������Ϊ��</p>
-<p><i class="icon-list"></i> Ŀ¼�����ٵ�����ǰ�ĸ���Ŀ¼�ṹ����ת������Ȥ�Ķ���<br><i class="icon-chevron-sign-left"></i> ��ͼ���������߱༭�����ұ�Ԥ������λ��<br><i class="icon-adjust"></i> ���⣺�����˺ڰ�����ģʽ�����⣬���� <strong>��ɫ����</strong>�����ţ�<br><i class="icon-desktop"></i> �Ķ��������������Ķ�ģʽ�ṩ��һ�����Ķ�����<br><i class="icon-fullscreen"></i> ȫ�������࣬���࣬�ټ��࣬һ����ȫ����ʽ��д�����Ķ�����</p>
-<h3 id="8-�K�gʽ"><a href="#8-�K�gʽ" class="headerlink" title="8. �Ķ�ģʽ"></a>8. �Ķ�ģʽ</h3><p>�� <strong>�Ķ�������</strong> ���� <i class="icon-desktop"></i> ���߰��� <code>Ctrl+Alt+M</code> �漴�����������Ķ�ģʽ���棬�����ڰ�����Ⱦ�ϵ�ÿһ��ϸ�ڣ����壬�ֺţ��м��࣬ǰ����ɫ����ע�˴�����ʱ�䣬Ŭ�������Ķ���������Ʒ�ʡ�</p>
-<h3 id="9-��k������������"><a href="#9-��k������������" class="headerlink" title="9. ��ǩ������������"></a>9. ��ǩ������������</h3><p>�ڱ༭����������λ���������¸�ʽ�����ֿ��Ա�ǩ��ǰ�ĵ���</p>
-<p>��ǩ�� δ����</p>
-<p>��ǩ�Ժ����ĸ��ڡ��ļ��б�����Ctrl+Alt+F�����ᰴ�ձ�ǩ���࣬�û�����ͬʱʹ�ü��̻������������鿴�������ڡ��ļ��б����������ı��������������ؼ��ֹ����ĸ壬����ͼ��ʾ��</p>
-<p><img src="https://www.zybuluo.com/static/img/file-list.png" alt="file-list"></p>
-<h3 id="10-�ĸ巢���ͷ���"><a href="#10-�ĸ巢���ͷ���" class="headerlink" title="10. �ĸ巢���ͷ���"></a>10. �ĸ巢���ͷ���</h3><p>����ʹ�� Cmd Markdown ��¼���������������Ķ��ĸ���ͬʱ�����ǲ���ϣ������һ�������Ĺ��ߣ���ϣ������˼����֪ʶͨ������ƽ̨����ͬ���ʵ��Ķ����飬�����Ƿ���������ͬ־Ȥ���ˣ���������������������������¼�������ǵ�˼����֪ʶ�����Ե��� <i class="icon-share"></i> (Ctrl+Alt+P) ���������ĵ������Ѱɣ�</p>
-<hr>
-<p>��һ�θ�л������ʱ���Ķ����ݻ�ӭ�壬���� <i class="icon-file"></i> (Ctrl+Alt+N) ��ʼ׫д�µ��ĸ��ɣ�ף����������¼���Ķ����������죡</p>
-<p>���� <a href="http://weibo.com/ghosert" target="_blank" rel="external">@ghosert</a><br>2016 �� 07�� 07��    </p>
-<p>[^LaTeX]: ֧�� <strong>LaTeX</strong> �༭��ʾ֧�֣����磺$\sum_{i=1}^n a_i=0$�� ���� <a href="http://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference" target="_blank" rel="external">MathJax</a> �ο�����ʹ�÷�����</p>
-<p>[^code]: ������������֧�ְ��� Java, Python, JavaScript ���ڵģ�<strong>��ʮһ</strong>�������������ԡ�</p>
 
       
     </div>
