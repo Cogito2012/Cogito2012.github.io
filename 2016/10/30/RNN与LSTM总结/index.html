@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Bao&#39;s Blog</title>
+  <title>Cogito2012&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="RNN与LSTM学习总结
 
@@ -13,11 +13,12 @@ RNN要解决的问题
 标准RNN存在的问题
 LSTM基本原理
 LSTM的其它变体
-RNN在目标检测方面的应用">
+RNN在目标检测方面的应用
+参考文献">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Bao's Blog">
-<meta property="og:url" content="http://yoursite.com/2016/10/30/RNN与LSTM总结/index.html">
-<meta property="og:site_name" content="Bao's Blog">
+<meta property="og:title" content="Cogito2012's Blog">
+<meta property="og:url" content="https://github.com/Cogito2012/2016/10/30/RNN与LSTM总结/index.html">
+<meta property="og:site_name" content="Cogito2012's Blog">
 <meta property="og:description" content="RNN与LSTM学习总结
 
 
@@ -26,7 +27,8 @@ RNN要解决的问题
 标准RNN存在的问题
 LSTM基本原理
 LSTM的其它变体
-RNN在目标检测方面的应用">
+RNN在目标检测方面的应用
+参考文献">
 <meta property="og:image" content="http://cogito2012.github.io/assets/img/RNN.png">
 <meta property="og:image" content="http://cogito2012.github.io/assets/img/LSTM.png">
 <meta property="og:image" content="http://cogito2012.github.io/assets/img/LSTM_forgetGate.png">
@@ -36,9 +38,9 @@ RNN在目标检测方面的应用">
 <meta property="og:image" content="http://cogito2012.github.io/assets/img/Formular.png">
 <meta property="og:image" content="http://cogito2012.github.io/assets/img/peepholeLSTM.png">
 <meta property="og:image" content="http://cogito2012.github.io/assets/img/GRU.png">
-<meta property="og:updated_time" content="2016-10-30T12:54:57.070Z">
+<meta property="og:updated_time" content="2016-10-30T12:57:47.485Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Bao's Blog">
+<meta name="twitter:title" content="Cogito2012's Blog">
 <meta name="twitter:description" content="RNN与LSTM学习总结
 
 
@@ -47,7 +49,8 @@ RNN要解决的问题
 标准RNN存在的问题
 LSTM基本原理
 LSTM的其它变体
-RNN在目标检测方面的应用">
+RNN在目标检测方面的应用
+参考文献">
 <meta name="twitter:image" content="http://cogito2012.github.io/assets/img/RNN.png">
   
   
@@ -63,7 +66,7 @@ RNN在目标检测方面的应用">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
 			
-			<img lazy-src="https://github.com/Cogito2012/Cogito2012.github.io/tree/master/img/head.jpg" class="js-avatar">
+			<img lazy-src="/assets/img/head.jpg" class="js-avatar">
 			
 		</a>
 
@@ -71,6 +74,8 @@ RNN在目标检测方面的应用">
 		  <h1 class="header-author"><a href="/">Wentao Bao</a></h1>
 		</hgroup>
 
+		
+		<p class="header-subtitle">不难，要你干嘛？！</p>
 		
 
 		
@@ -116,7 +121,11 @@ RNN在目标检测方面的应用">
 						
 							<li><a href="/">主页</a></li>
 				        
-							<li><a href="/archives">文章</a></li>
+							<li><a href="/archives">所有文章</a></li>
+				        
+							<li><a href="/tags/随笔">随笔</a></li>
+				        
+							<li><a href="/tags/技术">技术</a></li>
 				        
 						</ul>
 					</nav>
@@ -164,18 +173,24 @@ RNN在目标检测方面的应用">
 	<div class="intrude-less">
 		<header id="header" class="inner">
 			<div class="profilepic">
-				<img lazy-src="https://github.com/Cogito2012/Cogito2012.github.io/tree/master/img/head.jpg" class="js-avatar">
+				<img lazy-src="/assets/img/head.jpg" class="js-avatar">
 			</div>
 			<hgroup>
 			  <h1 class="header-author">Wentao Bao</h1>
 			</hgroup>
+			
+			<p class="header-subtitle">不难，要你干嘛？！</p>
 			
 			<nav class="header-menu">
 				<ul>
 				
 					<li><a href="/">主页</a></li>
 		        
-					<li><a href="/archives">文章</a></li>
+					<li><a href="/archives">所有文章</a></li>
+		        
+					<li><a href="/tags/随笔">随笔</a></li>
+		        
+					<li><a href="/tags/技术">技术</a></li>
 		        
 		        <div class="clearfix"></div>
 				</ul>
@@ -218,6 +233,7 @@ RNN在目标检测方面的应用">
 <li>LSTM基本原理</li>
 <li>LSTM的其它变体</li>
 <li>RNN在目标检测方面的应用</li>
+<li>参考文献</li>
 </ul>
 </blockquote>
 <a id="more"></a>
@@ -247,6 +263,7 @@ RNN在目标检测方面的应用">
 <li><p>Liang M, Hu X. Recurrent convolutional neural network for object recognition[C]//Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition. 2015: 3367-3375.<br>&nbsp; &nbsp; &nbsp; &nbsp;每一层卷积后用RNN，文章引用量不大。</p>
 </li>
 </ul>
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p>[1]. Lipton Z C, Berkowitz J, Elkan C. A critical review of recurrent neural networks for sequence learning[J]. arXiv preprint arXiv:1506.00019, 2015.<br>[2]. Shi Yan. Understanding LSTM and its diagrams. [N/OL] <a href="https://medium.com/@shiyan/understanding-lstm-and-its-diagrams-37e2f46f1714#.txbyrhd0j" target="_blank" rel="external">https://medium.com/@shiyan/understanding-lstm-and-its-diagrams-37e2f46f1714#.txbyrhd0j</a>.<br>[3]. Aidan Gomez. Backpropogating an LSTM: A Numerical Example.[N/OL] <a href="https://medium.com/@aidangomez/let-s-do-this-f9b699de31d9#.qygi8z4wx" target="_blank" rel="external">https://medium.com/@aidangomez/let-s-do-this-f9b699de31d9#.qygi8z4wx</a>. </p>
 
       
     </div>
@@ -255,6 +272,15 @@ RNN在目标检测方面的应用">
   
     
 <nav id="article-nav">
+  
+    <a href="/2016/10/30/Group-penalized multinomial regression Principle and Application/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
   
   
     <a href="/2016/08/19/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
@@ -287,11 +313,11 @@ RNN在目标检测方面的应用">
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="RNN与LSTM总结" data-title="" data-url="http://yoursite.com/2016/10/30/RNN与LSTM总结/"></div>
+	<div class="ds-thread" data-thread-key="RNN与LSTM总结" data-title="" data-url="https://github.com/Cogito2012/2016/10/30/RNN与LSTM总结/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
-	var duoshuoQuery = {short_name:"true"};
+	var duoshuoQuery = {short_name:"Cogito2012"};
 	(function() {
 		var ds = document.createElement('script');
 		ds.type = 'text/javascript';ds.async = true;
