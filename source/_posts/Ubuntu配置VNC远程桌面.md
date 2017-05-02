@@ -2,6 +2,12 @@
 
 ------
 
+> * ssh远程登陆服务
+> * vnc客户端vncviewer的安装与使用
+> * xfce4 + VNCServer远程桌面
+> * VNCViewer远程桌面日常使用
+
+<!--more-->
 ## ssh远程登陆服务
 要实现VNC远程桌面控制，首先需要确定能否利用ssh远程命令登陆服务器，一条命令即可：
 ```sudo apt-get install openssh-server```
