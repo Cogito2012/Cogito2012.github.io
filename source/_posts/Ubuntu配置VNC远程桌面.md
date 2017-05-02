@@ -1,52 +1,52 @@
-# Ubuntu����������VNCԶ������
+# Ubuntu服务器配置VNC远程桌面
 
 ------
 
-## sshԶ�̵�½����
-Ҫʵ��VNCԶ��������ƣ�������Ҫȷ���ܷ�����sshԶ�������½��������һ������ɣ�
+## ssh远程登陆服务
+要实现VNC远程桌面控制，首先需要确定能否利用ssh远程命令登陆服务器，一条命令即可：
 ```sudo apt-get install openssh-server```
-Ȼ��ȷ��һ��sshserver�Ƿ������ɹ���
-```ps -e | grep ssh` ���� `netstat -tlp```
-���ֻ��ssh-agent��ssh-server��û����������Ҫ���룺 ```/etc/init.d/ssh start```
-�������sshd��˵��ssh-server�Ѿ������ˡ�
-���˿�����Ϊssh�Ѿ���װ���ˣ�Ĭ�϶˿ں�Ϊ22�������޸ġ�
+然后确认一下sshserver是否启动成功：
+```ps -e | grep ssh` 或者 `netstat -tlp```
+如果只有ssh-agent那ssh-server还没有启动，需要输入： ```/etc/init.d/ssh start```
+如果看到sshd那说明ssh-server已经启动了。
+到此可以认为ssh已经安装好了，默认端口号为22，无需修改。
 
-������ȷ��ipv4��ַ������Զ�̷��ʸ÷�������```ifconfig```,�Ǻ�ip(���磺```192.168.xxx.xxx```)��Ȼ����԰ε���ʾ�����������ˡ�
+接下来确定ipv4地址，用于远程访问该服务器：```ifconfig```,记好ip(例如：```192.168.xxx.xxx```)，然后可以拔掉显示器和鼠标键盘了。
 
-������Ϊ��ѡ�
-Ϊ����sshԶ�̵�½���죨�������˻�����Ҫ�Ⱥþòų���������������⣩�����������������
+【以下为可选项】
+为了让ssh远程登陆更快（在输入账户名后要等好久才出现输入密码的问题），可以输入如下命令：
 ```sudo gedit /etc/ssh/sshd_config```
-�ҵ� GSSAPI options ��һ�ڣ�����������ע�͵���
+找到 GSSAPI options 这一节，将下面两行注释掉：
 ```# GSSAPIAuthentication yes```
 ```# GSSAPIDelegateCredentials no```
-Ȼ������ssh����
+然后重启ssh服务：
 ```sudo /etc/init.d/ssh restart```
 
-## vnc�ͻ���vncviewer�İ�װ��ʹ��
-��vncviewer��װ����WindowsϵͳΪ������Windows�ϰ�vncviewer������װһ�£�����������ܹ����صõ���
+## vnc客户端vncviewer的安装与使用
+【vncviewer安装】以Windows系统为例，在Windows上把vncviewer软件安装一下，网上随便搜能够下载得到。
 
-��xshell��װ���ڷ��������������ssh������ڱ��صĵ�������Ҫ��װ�����й��߽��е�½���Ƽ�ʹ��xshell���ߣ�����putty���ߡ�xshell���������ذ�װûʲô��˵�ģ����������һ�����ذ�װ���С���xshellΪ����
-װ��xshell������������sshԶ�̵�½���
+【xshell安装】在服务器主机上配好ssh服务后，在本地的电脑上需要安装命令行工具进行登陆，推荐使用xshell工具，或者putty工具。xshell软件的下载安装没什么可说的，网上随便搜一个下载安装就行。以xshell为例：
+装好xshell后启动，输入ssh远程登陆命令：
 ```ssh 192.168.xxx.xxx```
-�ڸ��ݵ�����ʾ������������˻��������룬����½�ɹ���
+在根据弹窗提示依次输出主机账户名和密码，即登陆成功。
 
-��ʱ��ֻ��������������Զ�̵�½��������������ʵ��ֱ��Զ��������ƣ���Ҫ�ڷ������ϰ�װvncviewer��Ӧ�ķ�������VNCServer�Լ����ڿ��ӻ�������ϵͳxfce4��
+这时候，只做到了用命令行远程登陆服务器，还不能实现直接远程桌面控制，需要在服务器上安装vncviewer对应的服务器端VNCServer以及用于可视化的桌面系统xfce4。
 
-## xfce4 + VNCServerԶ������
-xfce4��һ����������Ubuntu���滷�������ƵĻ���gnome��unity�ȵȡ�xfce4��װʮ�ּ򵥣�
-��xshell�����ssh��½�����룺
+## xfce4 + VNCServer远程桌面
+xfce4是一个轻量级的Ubuntu桌面环境，类似的还有gnome、unity等等。xfce4安装十分简单：
+在xshell命令窗口ssh登陆后输入：
 ```sudo apt-get install xfce4```
-Ȼ��װVNCServer:
+然后安装VNCServer:
 ```sudo apt-get install vnc4server```
-��װ��ɺ��һ������vncserver������vncserver�ķ���i���룬���룺
+安装完成后第一次启动vncserver来设置vncserver的服务i密码，输入：
 ```vncserver```
-����ǵ�һ�ΰ�װvncserver������ʾ����vnc�������룬������ʾҪ���߾��У���ס���롣�����󽫲���һ���˿�Ϊ`:1`�����棬
-������/home/username/.vnc/�����ļ����²���xstartup�����ļ���
+如果是第一次安装vncserver，会提示设置vnc服务密码，按照提示要求走就行，记住密码。结束后将产生一个端口为`:1`的桌面，
+并且在/home/username/.vnc/隐藏文件夹下产生xstartup配置文件。
 
-Ȼ����Ҫ��vncserver�������ļ�xstaup������xfce4���滷�����ã�
+然后需要在vncserver的配置文件xstaup中设置xfce4桌面环境配置：
 ```sudo vi ~/.vnc/xstartup```
-���������vi�༭���Ľ��棬�������޸��������ݡ�
-��i������༭����״̬���ƶ�����޸�����Ϊ���£�
+这里进入了vi编辑器的界面，我们来修改配置内容。
+按i键进入编辑输入状态，移动光标修改内容为如下：
 ```#!/bin/sh
 # Uncomment the following two lines for normal desktop:
 # unset SESSION_MANAGER
@@ -65,22 +65,22 @@ xfsettingsd &
 xfconfd &
 xfwm4 &
 ```
-����󣬰�```Esc```�˳��༭״̬��Ȼ������```:wq!```ǿ�Ʊ��沢�Ƴ�vi�༭����
+改完后，按```Esc```退出编辑状态，然后输入```:wq!```强制保存并推出vi编辑器。
 
-���ˣ�vncserver���ý�����������vnc�ͻ���VNCViewer��ʹ�á�
+至此，vncserver配置结束。下面是vnc客户端VNCViewer的使用。
 
-## VNCViewerԶ�������ճ�ʹ��
-�ճ�ʹ��VNCViewer����Զ�����棬���ȴ�xshell���������д���ssh��½��������Ȼ������vncserver��
+## VNCViewer远程桌面日常使用
+日常使用VNCViewer进行远程桌面，首先打开xshell，在命令行窗口ssh登陆服务器，然后启动vncserver：
 ```vncserver :5```
-���ߣ�
+或者：
 ```vncserver -geometry 1920x1080 :5```
-�������˿ں�Ϊ```:5```���������ã���������xxx:5.log��¼����������ʧ�ܣ����˿ں������Լ��趨����Ҫ��֤С��100������ͬʱʹ�ø÷������������˲��ظ�������ʧ�ܣ��ɶ��Լ��Ρ�`-geometry`�����趨��Զ�����洰�ڵķֱ��ʣ�ע��1920��1080֮������ĸx���ǳ˺�*��
-Ȼ������VNCViewer��ʼԶ�����棬����VNCViewer���½�һ��Զ�����棨�°�VNCViewer���ɰ治�ã����༭����VNCServer��ַ������Ϊ```����ip:VNC�˿ں�```���磺
+将产生端口号为```:5```的桌面配置（输入后产生xxx:5.log记录，否则启动失败），端口号数字自己设定，但要保证小于100，且与同时使用该服务器的其他人不重复，否则失败，可多试几次。`-geometry`参数设定了远程桌面窗口的分辨率，注意1920与1080之间是字母x而非乘号*。
+然后，利用VNCViewer开始远程桌面，启动VNCViewer，新建一个远程桌面（新版VNCViewer，旧版不用），编辑设置VNCServer地址，构成为```主机ip:VNC端口号```，如：
 ```192.168.xxx.xxx:5```
-�°�VNCViewer��Ҫ�����������˻�����˫����ʼ���ӣ��ɰ治�ã�ֱ�ӵ�connect���ӡ�
-Ȼ������VNC�������룬�������ӳɹ���
+新版VNCViewer需要设置下主机账户名，双击开始连接；旧版不用，直接点connect连接。
+然后输入VNC服务密码，即可连接成功。
 
-���ճ�ά����
-�������ʹ�ø�VNCĳ���˿ںţ�����```:5```���ˣ�����ɱ��,��xshell��ssh��½�����������룺
+【日常维护】
+如果不再使用该VNC某个端口号（比如```:5```）了，建议杀掉,在xshell中ssh登陆服务器后，输入：
 ```vncserver -kill :5```
 
