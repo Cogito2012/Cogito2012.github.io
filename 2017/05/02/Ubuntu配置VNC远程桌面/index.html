@@ -6,21 +6,33 @@
   <title>Cogito2012&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="Ubuntu服务器配置VNC远程桌面
-ssh远程登陆服务要实现VNC远程桌面控制，首先需要确定能否利用ssh远程命令登陆服务器，一条命令即可：apt-get install openssh-server```12然后确认一下sshserver是否启动成功：```ps -e | grep ssh` 或者 `netstat -tlp
-如果只有ssh-agent那ssh-server还没有启动，需要输入">
+
+
+ssh远程登陆服务
+vnc客户端vncviewer的安装与使用
+xfce4 + VNCServer远程桌面
+VNCViewer远程桌面日常使用">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Cogito2012's Blog">
 <meta property="og:url" content="https://github.com/Cogito2012/2017/05/02/Ubuntu配置VNC远程桌面/index.html">
 <meta property="og:site_name" content="Cogito2012's Blog">
 <meta property="og:description" content="Ubuntu服务器配置VNC远程桌面
-ssh远程登陆服务要实现VNC远程桌面控制，首先需要确定能否利用ssh远程命令登陆服务器，一条命令即可：apt-get install openssh-server```12然后确认一下sshserver是否启动成功：```ps -e | grep ssh` 或者 `netstat -tlp
-如果只有ssh-agent那ssh-server还没有启动，需要输入">
-<meta property="og:updated_time" content="2017-05-02T13:46:47.023Z">
+
+
+ssh远程登陆服务
+vnc客户端vncviewer的安装与使用
+xfce4 + VNCServer远程桌面
+VNCViewer远程桌面日常使用">
+<meta property="og:updated_time" content="2017-05-02T13:56:53.255Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Cogito2012's Blog">
 <meta name="twitter:description" content="Ubuntu服务器配置VNC远程桌面
-ssh远程登陆服务要实现VNC远程桌面控制，首先需要确定能否利用ssh远程命令登陆服务器，一条命令即可：apt-get install openssh-server```12然后确认一下sshserver是否启动成功：```ps -e | grep ssh` 或者 `netstat -tlp
-如果只有ssh-agent那ssh-server还没有启动，需要输入">
+
+
+ssh远程登陆服务
+vnc客户端vncviewer的安装与使用
+xfce4 + VNCServer远程桌面
+VNCViewer远程桌面日常使用">
   
   
     <link rel="icon" href="/favicon.png">
@@ -194,6 +206,15 @@ ssh远程登陆服务要实现VNC远程桌面控制，首先需要确定能否�
     <div class="article-entry" itemprop="articleBody">
       
         <h1 id="Ubuntu服务器配置VNC远程桌面"><a href="#Ubuntu服务器配置VNC远程桌面" class="headerlink" title="Ubuntu服务器配置VNC远程桌面"></a>Ubuntu服务器配置VNC远程桌面</h1><hr>
+<blockquote>
+<ul>
+<li>ssh远程登陆服务</li>
+<li>vnc客户端vncviewer的安装与使用</li>
+<li>xfce4 + VNCServer远程桌面</li>
+<li>VNCViewer远程桌面日常使用</li>
+</ul>
+</blockquote>
+<a id="more"></a>
 <h2 id="ssh远程登陆服务"><a href="#ssh远程登陆服务" class="headerlink" title="ssh远程登陆服务"></a>ssh远程登陆服务</h2><p>要实现VNC远程桌面控制，首先需要确定能否利用ssh远程命令登陆服务器，一条命令即可：<br><figure class="highlight plain"><figcaption><span>apt-get install openssh-server```</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">然后确认一下sshserver是否启动成功：</div><div class="line">```ps -e | grep ssh` 或者 `netstat -tlp</div></pre></td></tr></table></figure></p>
 <p>如果只有ssh-agent那ssh-server还没有启动，需要输入： <figure class="highlight plain"><figcaption><span>start```</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">如果看到sshd那说明ssh-server已经启动了。</div><div class="line">到此可以认为ssh已经安装好了，默认端口号为22，无需修改。</div><div class="line"></div><div class="line">接下来确定ipv4地址，用于远程访问该服务器：```ifconfig```,记好ip(例如：```192.168.xxx.xxx```)，然后可以拔掉显示器和鼠标键盘了。</div><div class="line"></div><div class="line">【以下为可选项】</div><div class="line">为了让ssh远程登陆更快（在输入账户名后要等好久才出现输入密码的问题），可以输入如下命令：</div><div class="line">```sudo gedit /etc/ssh/sshd_config</div></pre></td></tr></table></figure></p>
 <p>找到 GSSAPI options 这一节，将下面两行注释掉：<br><figure class="highlight plain"><figcaption><span>GSSAPIAuthentication yes```</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">```# GSSAPIDelegateCredentials no</div></pre></td></tr></table></figure></p>
