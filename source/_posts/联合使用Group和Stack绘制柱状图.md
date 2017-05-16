@@ -9,7 +9,7 @@
 <!--more-->
 先上效果图：
 <center>
-![Graph](http://cogito2012.github.io/assets/img/graph.bmp "图1 联合使用Group和Stack绘制柱状图")
+![Graph](http://cogito2012.github.io/assets/img/graph.png "图1 联合使用Group和Stack绘制柱状图")
 </center>
 
 然后结合MATLAB代码，逐步说明实现效果吧。
@@ -147,7 +147,7 @@ set(legendH,'Orientation','horizon')
 最终效果如图：
 
 <center>
-![Graph](http://cogito2012.github.io/assets/img/graph.bmp "图3 联合使用Group和Stack绘制柱状图")
+![Graph](http://cogito2012.github.io/assets/img/graph.png "图3 联合使用Group和Stack绘制柱状图")
 </center>
 
 最后附上SCI论文比较常用的配色图，更多配图方案参考: [图表的基本配色方法](https://zhuanlan.zhihu.com/p/23377067)
