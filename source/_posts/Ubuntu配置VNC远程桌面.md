@@ -1,4 +1,6 @@
-# Ubuntu服务器配置VNC远程桌面
+---
+title: Ubuntu服务器配置VNC远程桌面
+---
 
 ------
 

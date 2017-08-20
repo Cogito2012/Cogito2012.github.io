@@ -1,4 +1,6 @@
-#  Group-penalized multinomial regression Principle and Application
+---
+title: Group-penalized multinomial regression Principle and Application
+---
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
 ------
 

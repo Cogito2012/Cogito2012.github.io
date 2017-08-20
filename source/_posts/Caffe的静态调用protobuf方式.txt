@@ -1,4 +1,6 @@
-#  Caffe使用问题解决：protobuf的静态调用
+---
+title: Caffe使用问题解决之protobuf的静态调用
+---
 
 ------
 

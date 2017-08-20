@@ -1,4 +1,6 @@
-#  RNN与LSTM学习总结
+---
+title: RNN与LSTM学习总结
+---
 
 ------
 
