@@ -1,44 +1,44 @@
 ---
-title: CaffeÊ¹ÓÃÎÊÌâ½â¾öÖ®protobufµÄ¾²Ì¬µ÷ÓÃ
+title: Caffeä½¿ç”¨é—®é¢˜è§£å†³ä¹‹protobufçš„é™æ€è°ƒç”¨
 ---
 
 ------
 
-> * ÎÊÌâÀ´Ô´
-> * ÎÊÌâÔ­Òò
-> * ½â¾ö°ì·¨
-> * ²Î¿¼×ÊÔ´
+> * é—®é¢˜æ¥æº
+> * é—®é¢˜åŸå› 
+> * è§£å†³åŠæ³•
+> * å‚è€ƒèµ„æº
 
 <!--more-->
-## ÎÊÌâÀ´Ô´
-ÔÚLinuxÏµÍ³ÖĞÊ¹ÓÃMatlabµÄFaster RCNN×öÄ¿±ê¼ì²âÊ±£¬Ïë±Ø´ó¼Ò¶¼»á¶ÔÓÚÕâÑùÒ»¸öÎÊÌâ±íÊ¾Éî¶ñÍ´¾ø£ºÆô¶¯MatlabÔËĞĞFaster RCNNµÄdemo»òÕßÆäËüÑµÁ·½Å±¾ºó£¬Èç¹û²»ÊÇÕı³£½áÊøÔËĞĞ£¨±ÈÈçmatlab´úÂë³öbug£¬»òÕßµ÷ÊÔ¹ı³ÌÖĞÖ¹£©£¬ÔÙ´ÎÔËĞĞ¸Ãmatlab½Å±¾Ê±£¬»á³öÏÖÈçÏÂ±¨´í£º
+## é—®é¢˜æ¥æº
+åœ¨Linuxç³»ç»Ÿä¸­ä½¿ç”¨Matlabçš„Faster RCNNåšç›®æ ‡æ£€æµ‹æ—¶ï¼Œæƒ³å¿…å¤§å®¶éƒ½ä¼šå¯¹äºè¿™æ ·ä¸€ä¸ªé—®é¢˜è¡¨ç¤ºæ·±æ¶ç—›ç»ï¼šå¯åŠ¨Matlabè¿è¡ŒFaster RCNNçš„demoæˆ–è€…å…¶å®ƒè®­ç»ƒè„šæœ¬åï¼Œå¦‚æœä¸æ˜¯æ­£å¸¸ç»“æŸè¿è¡Œï¼ˆæ¯”å¦‚matlabä»£ç å‡ºbugï¼Œæˆ–è€…è°ƒè¯•è¿‡ç¨‹ä¸­æ­¢ï¼‰ï¼Œå†æ¬¡è¿è¡Œè¯¥matlabè„šæœ¬æ—¶ï¼Œä¼šå‡ºç°å¦‚ä¸‹æŠ¥é”™ï¼š
 ```python
 ibprotobuf ERROR google/protobuf/descriptor_database.cc:57] File already exists in database: foo/foo.proto libprotobuf FATAL google/protobuf/descriptor.cc:862] CHECK failed: generated_database_->Add(encoded_file_descriptor, size):  terminate called after throwing an instance of 'google::protobuf::FatalException'   what():  CHECK failed: generated_database_->Add(encoded_file_descriptor, size): 
 ```
 
-Õâ¸öÎÊÌâ²»½ö½öÊÇMatlab°æµÄFaster RCNNÖĞ»á³öÏÖ£¬¶øÇÒÊÇÔÚ¹Ù·½µÄBVLC/caffeÖĞÒ²Í¬Ñù´æÔÚ£¬Ö»ÒªÓĞ¶à¸ö³ÌĞòÍ¬Ê±ÔËĞĞÊ±µ÷ÓÃcaffe£¬¾Í»á±¨ÉÏÊö´íÎó¡£
+è¿™ä¸ªé—®é¢˜ä¸ä»…ä»…æ˜¯Matlabç‰ˆçš„Faster RCNNä¸­ä¼šå‡ºç°ï¼Œè€Œä¸”æ˜¯åœ¨å®˜æ–¹çš„BVLC/caffeä¸­ä¹ŸåŒæ ·å­˜åœ¨ï¼Œåªè¦æœ‰å¤šä¸ªç¨‹åºåŒæ—¶è¿è¡Œæ—¶è°ƒç”¨caffeï¼Œå°±ä¼šæŠ¥ä¸Šè¿°é”™è¯¯ã€‚
 
-## ÎÊÌâÔ­Òò
-Ô­ÒòÊÇÒòÎªÔÚLinux²Ù×÷ÏµÍ³ÖĞ£¬ÒÔUbuntu14.04ÎªÀı£¬ÔÚÅäÖÃcaffeµÄÏµÍ³»·¾³Ê±ĞèÒª°²×°GoogleµÄprotobuf¿â£¬¹ÙÍø¸ø³öµÄ°²×°·½Ê½Îª£º
+## é—®é¢˜åŸå› 
+åŸå› æ˜¯å› ä¸ºåœ¨Linuxæ“ä½œç³»ç»Ÿä¸­ï¼Œä»¥Ubuntu14.04ä¸ºä¾‹ï¼Œåœ¨é…ç½®caffeçš„ç³»ç»Ÿç¯å¢ƒæ—¶éœ€è¦å®‰è£…Googleçš„protobufåº“ï¼Œå®˜ç½‘ç»™å‡ºçš„å®‰è£…æ–¹å¼ä¸ºï¼š
 ```python
 sudo apt-get install libprotobuf-dev protobuf-compiler
 ```
-ÕâÑù°²×°Ä¬ÈÏµÄprotobufµÄconfigureÑ¡ÏîÊÇÉú³É¶¯Ì¬Á´½Ó¿â£¨Ñ§¹ıÒ»µãC/C++µÄÓ¦¸Ã¶¼ÖªµÀ¶¯Ì¬¿âºÍ¾²Ì¬¿â£©£¬¼´libprotobuf.soÎÄ¼ş£¬ÎŞ·¨Âú×ãÍ¬Ò»¸ö¿âÎÄ¼ş±»¶à¸ö½ø³ÌÍ¬Ê±µ÷ÓÃµÄÒªÇó£¬Òò´ËĞèÒª¸Ä³É¾²Ì¬µ÷ÓÃprotobuf£¬Ò²¾ÍÊÇ°²×°protobufÊ±ĞèÒªÉú³É¶¯Ì¬Á´½Ó¿âlibprotobuf.aÎÄ¼ş£¬È»ºóÔÚcaffeÀïÃæÒÔ¾²Ì¬µ÷ÓÃµÄ·½Ê½Ê¹ÓÃprotobuf¡£
+è¿™æ ·å®‰è£…é»˜è®¤çš„protobufçš„configureé€‰é¡¹æ˜¯ç”ŸæˆåŠ¨æ€é“¾æ¥åº“ï¼ˆå­¦è¿‡ä¸€ç‚¹C/C++çš„åº”è¯¥éƒ½çŸ¥é“åŠ¨æ€åº“å’Œé™æ€åº“ï¼‰ï¼Œå³libprotobuf.soæ–‡ä»¶ï¼Œæ— æ³•æ»¡è¶³åŒä¸€ä¸ªåº“æ–‡ä»¶è¢«å¤šä¸ªè¿›ç¨‹åŒæ—¶è°ƒç”¨çš„è¦æ±‚ï¼Œå› æ­¤éœ€è¦æ”¹æˆé™æ€è°ƒç”¨protobufï¼Œä¹Ÿå°±æ˜¯å®‰è£…protobufæ—¶éœ€è¦ç”ŸæˆåŠ¨æ€é“¾æ¥åº“libprotobuf.aæ–‡ä»¶ï¼Œç„¶ååœ¨caffeé‡Œé¢ä»¥é™æ€è°ƒç”¨çš„æ–¹å¼ä½¿ç”¨protobufã€‚
 
-## ½â¾ö°ì·¨
-### protobufµÄ±àÒë°²×°
-ÒÔprotobuf-2.5.0°æ±¾ÎªÀı£¬Ê×ÏÈ´Ógoogle¹ÙÍøÏÂÔØprotobufÔ´Âë°ü:
-ÏÂÔØµØÖ·£º[http://protobuf.googlecode.com/files/protobuf-2.3.0.zip](http://protobuf.googlecode.com/files/protobuf-2.3.0.zip).
-¸½ÔùÍøÅÌµØÖ·£ºÁ´½Ó£º[http://pan.baidu.com/s/1eSnHBEy](http://pan.baidu.com/s/1eSnHBEy) ÃÜÂë£ºskrc
+## è§£å†³åŠæ³•
+### protobufçš„ç¼–è¯‘å®‰è£…
+ä»¥protobuf-2.5.0ç‰ˆæœ¬ä¸ºä¾‹ï¼Œé¦–å…ˆä»googleå®˜ç½‘ä¸‹è½½protobufæºç åŒ…:
+ä¸‹è½½åœ°å€ï¼š[http://protobuf.googlecode.com/files/protobuf-2.3.0.zip](http://protobuf.googlecode.com/files/protobuf-2.3.0.zip).
+é™„èµ ç½‘ç›˜åœ°å€ï¼šé“¾æ¥ï¼š[http://pan.baidu.com/s/1eSnHBEy](http://pan.baidu.com/s/1eSnHBEy) å¯†ç ï¼šskrc
 
-È»ºó½âÑ¹£¬ĞŞ¸ÄÅäÖÃÎÄ¼ş
+ç„¶åè§£å‹ï¼Œä¿®æ”¹é…ç½®æ–‡ä»¶
 ```python
 sudo tar zxvf protobuf-2.5.0.tar.gz
 cd protobuf-2.5.0
-sudo gedit ./configure # »òÕß sudo vim ./configure
+sudo gedit ./configure # æˆ–è€… sudo vim ./configure
 ```
 
-È»ºó²éÕÒµ½./configureÎÄ¼şµÄCFLAGSºÍCXXFLAGS£¬Ìí¼Ó`-fPIC`Ñ¡Ïî£¬¼´×öÈçÏÂ¸ü¸Ä£º
+ç„¶åæŸ¥æ‰¾åˆ°./configureæ–‡ä»¶çš„CFLAGSå’ŒCXXFLAGSï¼Œæ·»åŠ `-fPIC`é€‰é¡¹ï¼Œå³åšå¦‚ä¸‹æ›´æ”¹ï¼š
 ```
 if test "x${ac_cv_env_CFLAGS_set}" = "x"; then :
 	CFLAGS="-fPIC" 
@@ -48,7 +48,7 @@ if test "x${ac_cv_env_CXXFLAGS_set}" = "x"; then :
 fi
 ```
 
-È»ºóÌí¼Ó`--disable-shared`Ñ¡Ïî½øĞĞprotobufµÄ±àÒëºÍ°²×°£º
+ç„¶åæ·»åŠ `--disable-shared`é€‰é¡¹è¿›è¡Œprotobufçš„ç¼–è¯‘å’Œå®‰è£…ï¼š
 ```python
 sudo sh ./configrue --disable-shared
 sudo make -j8
@@ -56,37 +56,37 @@ sudo make check -j8
 sudo make install -j8
 ```
 
-×îºóÈ·±£ÉÏÊöÃüÁîÊä³öÃ»ÓĞ´íÎóºó£¬Ë¢ĞÂÏµÍ³µÄ¹²Ïí¿â£¬²¢¼ì²éprotobufÊÇ·ñ°²×°µ½ÏµÍ³Ä¿Â¼£º
+æœ€åç¡®ä¿ä¸Šè¿°å‘½ä»¤è¾“å‡ºæ²¡æœ‰é”™è¯¯åï¼Œåˆ·æ–°ç³»ç»Ÿçš„å…±äº«åº“ï¼Œå¹¶æ£€æŸ¥protobufæ˜¯å¦å®‰è£…åˆ°ç³»ç»Ÿç›®å½•ï¼š
 ```python
 sudo ldconfig # refresh shared library cache  
 protoc --version
 ```
 
-### CaffeµÄ±àÒëÇ°¸ü¸Ä
-ÔÚ°´ÕÕ¹ÙÍø¸øµÄcaffe±àÒëÃüÁîÖ®Ç°£¬ĞèÒª¸ü¸ÄMakefileÎÄ¼ş£¬ÒÔÖ§³ÖprotobufµÄ¶¯Ì¬¼ÓÔØ
-Ê×ÏÈ£¬ÃüÁî```sudo gedit Makefile```´ò¿ªMakefileÎÄ¼ş£¬²éÕÒ`LDFLAGS`µÄ¶¨ÒåÎ»ÖÃ£¬Ìí¼ÓÈçÏÂÒ»ĞĞÑ¡Ïî£º
+### Caffeçš„ç¼–è¯‘å‰æ›´æ”¹
+åœ¨æŒ‰ç…§å®˜ç½‘ç»™çš„caffeç¼–è¯‘å‘½ä»¤ä¹‹å‰ï¼Œéœ€è¦æ›´æ”¹Makefileæ–‡ä»¶ï¼Œä»¥æ”¯æŒprotobufçš„åŠ¨æ€åŠ è½½
+é¦–å…ˆï¼Œå‘½ä»¤```sudo gedit Makefile```æ‰“å¼€Makefileæ–‡ä»¶ï¼ŒæŸ¥æ‰¾`LDFLAGS`çš„å®šä¹‰ä½ç½®ï¼Œæ·»åŠ å¦‚ä¸‹ä¸€è¡Œé€‰é¡¹ï¼š
 ```python
 LDFLAGS += -Wl,-Bstatic -lprotobuf -Wl,-Bdynamic  
 ```
 
-È»ºó£¬²éÕÒ`LIBRARIES`µÄ¶¨ÒåÎ»ÖÃ£¬½«`protobuf`Ò»ÏîÉ¾³ı£¬É¾³ıºóµÄ`LIBRARIES`¶¨ÒåÎª£º
+ç„¶åï¼ŒæŸ¥æ‰¾`LIBRARIES`çš„å®šä¹‰ä½ç½®ï¼Œå°†`protobuf`ä¸€é¡¹åˆ é™¤ï¼Œåˆ é™¤åçš„`LIBRARIES`å®šä¹‰ä¸ºï¼š
 ```python
 LIBRARIES += glog gflags boost_system boost_filesystem m hdf5_hl hdf5
 ```
 
-×îºó£¬²éÕÒ`CXXFLAGS`µÄ¶¨ÒåÎ»ÖÃ£¬Ìí¼Ó`-fPIC`Ñ¡Ïî
+æœ€åï¼ŒæŸ¥æ‰¾`CXXFLAGS`çš„å®šä¹‰ä½ç½®ï¼Œæ·»åŠ `-fPIC`é€‰é¡¹
 ```python
 CXXFLAGS += -MMD -MP -fPIC
 ```
 
-###CaffeµÄ±àÒë
+###Caffeçš„ç¼–è¯‘
 ```python
 sudo make clean # if failed before
 sudo make -j8
 sudo make matcaffe
 ```
 
-## ²Î¿¼×ÊÔ´
+## å‚è€ƒèµ„æº
 [1]. [http://blog.csdn.net/fengbingchun/article/details/72318839](http://blog.csdn.net/fengbingchun/article/details/72318839)
 [2]. [http://blog.csdn.net/linyushan11/article/details/10378419](http://blog.csdn.net/linyushan11/article/details/10378419)
 [3]. [http://caffe.berkeleyvision.org/install_apt.html](http://caffe.berkeleyvision.org/install_apt.html)
