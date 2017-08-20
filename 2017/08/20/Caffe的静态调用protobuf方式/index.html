@@ -3,27 +3,27 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Caffeʹ����������֮protobuf�ľ�̬���� | Cogito2012&#39;s Blog</title>
+  <title>Caffe使用问题解决之protobuf的静态调用 | Cogito2012&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="������Դ
-����ԭ��
-�����취
-�ο���Դ">
+  <meta name="description" content="问题来源
+问题原因
+解决办法
+参考资源">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Caffeʹ����������֮protobuf�ľ�̬����">
+<meta property="og:title" content="Caffe使用问题解决之protobuf的静态调用">
 <meta property="og:url" content="https://github.com/Cogito2012/2017/08/20/Caffe的静态调用protobuf方式/index.html">
 <meta property="og:site_name" content="Cogito2012's Blog">
-<meta property="og:description" content="������Դ
-����ԭ��
-�����취
-�ο���Դ">
-<meta property="og:updated_time" content="2017-08-20T11:35:05.569Z">
+<meta property="og:description" content="问题来源
+问题原因
+解决办法
+参考资源">
+<meta property="og:updated_time" content="2017-08-20T11:43:07.617Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Caffeʹ����������֮protobuf�ľ�̬����">
-<meta name="twitter:description" content="������Դ
-����ԭ��
-�����취
-�ο���Դ">
+<meta name="twitter:title" content="Caffe使用问题解决之protobuf的静态调用">
+<meta name="twitter:description" content="问题来源
+问题原因
+解决办法
+参考资源">
   
   
     <link rel="icon" href="/favicon.png">
@@ -198,7 +198,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Caffeʹ����������֮protobuf�ľ�̬����
+      Caffe使用问题解决之protobuf的静态调用
     </h1>
   
 
@@ -217,27 +217,27 @@
         <hr>
 <blockquote>
 <ul>
-<li>������Դ</li>
-<li>����ԭ��</li>
-<li>�����취</li>
-<li>�ο���Դ</li>
+<li>问题来源</li>
+<li>问题原因</li>
+<li>解决办法</li>
+<li>参考资源</li>
 </ul>
 </blockquote>
 <a id="more"></a>
-<h2 id="������Դ"><a href="#������Դ" class="headerlink" title="������Դ"></a>������Դ</h2><p>��Linuxϵͳ��ʹ��Matlab��Faster RCNN��Ŀ������ʱ�����ش��Ҷ�����������һ��������ʾ����ʹ��������Matlab����Faster RCNN��demo��������ѵ���ű������������������������У�����matlab������bug�����ߵ��Թ�����ֹ�����ٴ����и�matlab�ű�ʱ�����������±�����<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ibprotobuf ERROR google/protobuf/descriptor_database.cc:57] File already exists in database: foo/foo.proto libprotobuf FATAL google/protobuf/descriptor.cc:862] CHECK failed: generated_database_-&gt;Add(encoded_file_descriptor, size):  terminate called after throwing an instance of 'google::protobuf::FatalException'   what():  CHECK failed: generated_database_-&gt;Add(encoded_file_descriptor, size):</div></pre></td></tr></table></figure></p>
-<p>�������ⲻ������Matlab����Faster RCNN�л����֣��������ڹٷ���BVLC/caffe��Ҳͬ�����ڣ�ֻҪ�ж�������ͬʱ����ʱ����caffe���ͻᱨ����������</p>
-<h2 id="����ԭ��"><a href="#����ԭ��" class="headerlink" title="����ԭ��"></a>����ԭ��</h2><p>ԭ������Ϊ��Linux����ϵͳ�У���Ubuntu14.04Ϊ����������caffe��ϵͳ����ʱ��Ҫ��װGoogle��protobuf�⣬���������İ�װ��ʽΪ��<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-get install libprotobuf-dev protobuf-compiler</div></pre></td></tr></table></figure></p>
-<p>������װĬ�ϵ�protobuf��configureѡ�������ɶ�̬���ӿ⣨ѧ��һ��C/C++��Ӧ�ö�֪����̬���;�̬�⣩����libprotobuf.so�ļ����޷�����ͬһ�����ļ�����������ͬʱ���õ�Ҫ����������Ҫ�ĳɾ�̬����protobuf��Ҳ���ǰ�װprotobufʱ��Ҫ���ɶ�̬���ӿ�libprotobuf.a�ļ���Ȼ����caffe�����Ծ�̬���õķ�ʽʹ��protobuf��</p>
-<h2 id="�����취"><a href="#�����취" class="headerlink" title="�����취"></a>�����취</h2><h3 id="protobuf�i��밲װ"><a href="#protobuf�i��밲װ" class="headerlink" title="protobuf�ı��밲װ"></a>protobuf�ı��밲װ</h3><p>��protobuf-2.5.0�汾Ϊ�������ȴ�google��������protobufԴ����:<br>���ص�ַ��<a href="http://protobuf.googlecode.com/files/protobuf-2.3.0.zip" target="_blank" rel="external">http://protobuf.googlecode.com/files/protobuf-2.3.0.zip</a>.<br>�������̵�ַ�����ӣ�<a href="http://pan.baidu.com/s/1eSnHBEy" target="_blank" rel="external">http://pan.baidu.com/s/1eSnHBEy</a> ���룺skrc</p>
-<p>Ȼ����ѹ���޸������ļ�<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">sudo tar zxvf protobuf<span class="number">-2.5</span><span class="number">.0</span>.tar.gz</div><div class="line">cd protobuf<span class="number">-2.5</span><span class="number">.0</span></div><div class="line">sudo gedit ./configure <span class="comment"># ���� sudo vim ./configure</span></div></pre></td></tr></table></figure></p>
-<p>Ȼ�����ҵ�./configure�ļ���CFLAGS��CXXFLAGS������<code>-fPIC</code>ѡ��������¸��ģ�<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> <span class="built_in">test</span> <span class="string">"x<span class="variable">$&#123;ac_cv_env_CFLAGS_set&#125;</span>"</span> = <span class="string">"x"</span>; <span class="keyword">then</span> :</div><div class="line"> CFLAGS=<span class="string">"-fPIC"</span> </div><div class="line"><span class="keyword">fi</span> </div><div class="line"><span class="keyword">if</span> <span class="built_in">test</span> <span class="string">"x<span class="variable">$&#123;ac_cv_env_CXXFLAGS_set&#125;</span>"</span> = <span class="string">"x"</span>; <span class="keyword">then</span> :   </div><div class="line"> CXXFLAGS=<span class="string">"-fPIC"</span></div><div class="line"><span class="keyword">fi</span></div></pre></td></tr></table></figure></p>
-<p>Ȼ������<code>--disable-shared</code>ѡ������protobuf�ı����Ͱ�װ��<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">sudo sh ./configrue --disable-shared</div><div class="line">sudo make -j8</div><div class="line">sudo make check -j8</div><div class="line">sudo make install -j8</div></pre></td></tr></table></figure></p>
-<p>����ȷ��������������û�д�������ˢ��ϵͳ�Ĺ����⣬������protobuf�Ƿ���װ��ϵͳĿ¼��<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo ldconfig <span class="comment"># refresh shared library cache  </span></div><div class="line">protoc --version</div></pre></td></tr></table></figure></p>
-<h3 id="Caffe�i���j����"><a href="#Caffe�i���j����" class="headerlink" title="Caffe�ı���ǰ����"></a>Caffe�ı���ǰ����</h3><p>�ڰ��չ�������caffe��������֮ǰ����Ҫ����Makefile�ļ�����֧��protobuf�Ķ�̬����<br>���ȣ�����<figure class="highlight plain"><figcaption><span>gedit Makefile```����Makefile�ļ�������`LDFLAGS`�Ķ���λ�ã���������һ��ѡ�</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">```python</div><div class="line">LDFLAGS += -Wl,-Bstatic -lprotobuf -Wl,-Bdynamic</div></pre></td></tr></table></figure></p>
-<p>Ȼ�󣬲���<code>LIBRARIES</code>�Ķ���λ�ã���<code>protobuf</code>һ��ɾ����ɾ������<code>LIBRARIES</code>����Ϊ��<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">LIBRARIES += glog gflags boost_system boost_filesystem m hdf5_hl hdf5</div></pre></td></tr></table></figure></p>
-<p>���󣬲���<code>CXXFLAGS</code>�Ķ���λ�ã�����<code>-fPIC</code>ѡ��<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">CXXFLAGS += -MMD -MP -fPIC</div></pre></td></tr></table></figure></p>
-<p>###Caffe�ı���<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">sudo make clean <span class="comment"># if failed before</span></div><div class="line">sudo make -j8</div><div class="line">sudo make matcaffe</div></pre></td></tr></table></figure></p>
-<h2 id="�ο���Դ"><a href="#�ο���Դ" class="headerlink" title="�ο���Դ"></a>�ο���Դ</h2><p>[1]. <a href="http://blog.csdn.net/fengbingchun/article/details/72318839" target="_blank" rel="external">http://blog.csdn.net/fengbingchun/article/details/72318839</a><br>[2]. <a href="http://blog.csdn.net/linyushan11/article/details/10378419" target="_blank" rel="external">http://blog.csdn.net/linyushan11/article/details/10378419</a><br>[3]. <a href="http://caffe.berkeleyvision.org/install_apt.html" target="_blank" rel="external">http://caffe.berkeleyvision.org/install_apt.html</a><br>[4]. <a href="https://github.com/BVLC/caffe/issues/1917">https://github.com/BVLC/caffe/issues/1917</a></p>
+<h2 id="问题来源"><a href="#问题来源" class="headerlink" title="问题来源"></a>问题来源</h2><p>在Linux系统中使用Matlab的Faster RCNN做目标检测时，想必大家都会对于这样一个问题表示深恶痛绝：启动Matlab运行Faster RCNN的demo或者其它训练脚本后，如果不是正常结束运行（比如matlab代码出bug，或者调试过程中止），再次运行该matlab脚本时，会出现如下报错：<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ibprotobuf ERROR google/protobuf/descriptor_database.cc:57] File already exists in database: foo/foo.proto libprotobuf FATAL google/protobuf/descriptor.cc:862] CHECK failed: generated_database_-&gt;Add(encoded_file_descriptor, size):  terminate called after throwing an instance of 'google::protobuf::FatalException'   what():  CHECK failed: generated_database_-&gt;Add(encoded_file_descriptor, size):</div></pre></td></tr></table></figure></p>
+<p>这个问题不仅仅是Matlab版的Faster RCNN中会出现，而且是在官方的BVLC/caffe中也同样存在，只要有多个程序同时运行时调用caffe，就会报上述错误。</p>
+<h2 id="问题原因"><a href="#问题原因" class="headerlink" title="问题原因"></a>问题原因</h2><p>原因是因为在Linux操作系统中，以Ubuntu14.04为例，在配置caffe的系统环境时需要安装Google的protobuf库，官网给出的安装方式为：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-get install libprotobuf-dev protobuf-compiler</div></pre></td></tr></table></figure></p>
+<p>这样安装默认的protobuf的configure选项是生成动态链接库（学过一点C/C++的应该都知道动态库和静态库），即libprotobuf.so文件，无法满足同一个库文件被多个进程同时调用的要求，因此需要改成静态调用protobuf，也就是安装protobuf时需要生成动态链接库libprotobuf.a文件，然后在caffe里面以静态调用的方式使用protobuf。</p>
+<h2 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h2><h3 id="protobuf的编译安装"><a href="#protobuf的编译安装" class="headerlink" title="protobuf的编译安装"></a>protobuf的编译安装</h3><p>以protobuf-2.5.0版本为例，首先从google官网下载protobuf源码包:<br>下载地址：<a href="http://protobuf.googlecode.com/files/protobuf-2.3.0.zip" target="_blank" rel="external">http://protobuf.googlecode.com/files/protobuf-2.3.0.zip</a>.<br>附赠网盘地址：链接：<a href="http://pan.baidu.com/s/1eSnHBEy" target="_blank" rel="external">http://pan.baidu.com/s/1eSnHBEy</a> 密码：skrc</p>
+<p>然后解压，修改配置文件<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">sudo tar zxvf protobuf<span class="number">-2.5</span><span class="number">.0</span>.tar.gz</div><div class="line">cd protobuf<span class="number">-2.5</span><span class="number">.0</span></div><div class="line">sudo gedit ./configure <span class="comment"># 或者 sudo vim ./configure</span></div></pre></td></tr></table></figure></p>
+<p>然后查找到./configure文件的CFLAGS和CXXFLAGS，添加<code>-fPIC</code>选项，即做如下更改：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> <span class="built_in">test</span> <span class="string">"x<span class="variable">$&#123;ac_cv_env_CFLAGS_set&#125;</span>"</span> = <span class="string">"x"</span>; <span class="keyword">then</span> :</div><div class="line"> CFLAGS=<span class="string">"-fPIC"</span> </div><div class="line"><span class="keyword">fi</span> </div><div class="line"><span class="keyword">if</span> <span class="built_in">test</span> <span class="string">"x<span class="variable">$&#123;ac_cv_env_CXXFLAGS_set&#125;</span>"</span> = <span class="string">"x"</span>; <span class="keyword">then</span> :   </div><div class="line"> CXXFLAGS=<span class="string">"-fPIC"</span></div><div class="line"><span class="keyword">fi</span></div></pre></td></tr></table></figure></p>
+<p>然后添加<code>--disable-shared</code>选项进行protobuf的编译和安装：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">sudo sh ./configrue --disable-shared</div><div class="line">sudo make -j8</div><div class="line">sudo make check -j8</div><div class="line">sudo make install -j8</div></pre></td></tr></table></figure></p>
+<p>最后确保上述命令输出没有错误后，刷新系统的共享库，并检查protobuf是否安装到系统目录：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo ldconfig <span class="comment"># refresh shared library cache  </span></div><div class="line">protoc --version</div></pre></td></tr></table></figure></p>
+<h3 id="Caffe的编译前更改"><a href="#Caffe的编译前更改" class="headerlink" title="Caffe的编译前更改"></a>Caffe的编译前更改</h3><p>在按照官网给的caffe编译命令之前，需要更改Makefile文件，以支持protobuf的动态加载<br>首先，命令<figure class="highlight plain"><figcaption><span>gedit Makefile```打开Makefile文件，查找`LDFLAGS`的定义位置，添加如下一行选项：</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">```python</div><div class="line">LDFLAGS += -Wl,-Bstatic -lprotobuf -Wl,-Bdynamic</div></pre></td></tr></table></figure></p>
+<p>然后，查找<code>LIBRARIES</code>的定义位置，将<code>protobuf</code>一项删除，删除后的<code>LIBRARIES</code>定义为：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">LIBRARIES += glog gflags boost_system boost_filesystem m hdf5_hl hdf5</div></pre></td></tr></table></figure></p>
+<p>最后，查找<code>CXXFLAGS</code>的定义位置，添加<code>-fPIC</code>选项<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">CXXFLAGS += -MMD -MP -fPIC</div></pre></td></tr></table></figure></p>
+<p>###Caffe的编译<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">sudo make clean <span class="comment"># if failed before</span></div><div class="line">sudo make -j8</div><div class="line">sudo make matcaffe</div></pre></td></tr></table></figure></p>
+<h2 id="参考资源"><a href="#参考资源" class="headerlink" title="参考资源"></a>参考资源</h2><p>[1]. <a href="http://blog.csdn.net/fengbingchun/article/details/72318839" target="_blank" rel="external">http://blog.csdn.net/fengbingchun/article/details/72318839</a><br>[2]. <a href="http://blog.csdn.net/linyushan11/article/details/10378419" target="_blank" rel="external">http://blog.csdn.net/linyushan11/article/details/10378419</a><br>[3]. <a href="http://caffe.berkeleyvision.org/install_apt.html" target="_blank" rel="external">http://caffe.berkeleyvision.org/install_apt.html</a><br>[4]. <a href="https://github.com/BVLC/caffe/issues/1917">https://github.com/BVLC/caffe/issues/1917</a></p>
 
       
     </div>
@@ -278,7 +278,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="Caffe的静态调用protobuf方式" data-title="Caffeʹ����������֮protobuf�ľ�̬����" data-url="https://github.com/Cogito2012/2017/08/20/Caffe的静态调用protobuf方式/"></div>
+	<div class="ds-thread" data-thread-key="Caffe的静态调用protobuf方式" data-title="Caffe使用问题解决之protobuf的静态调用" data-url="https://github.com/Cogito2012/2017/08/20/Caffe的静态调用protobuf方式/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
