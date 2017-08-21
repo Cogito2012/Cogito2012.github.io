@@ -13,10 +13,17 @@ title: Caffe使用问题解决之protobuf的静态调用
 ## 问题来源
 在Linux系统中使用Matlab的Faster RCNN做目标检测时，想必大家都会对于这样一个问题表示深恶痛绝：启动Matlab运行Faster RCNN的demo或者其它训练脚本后，如果不是正常结束运行（比如matlab代码出bug，或者调试过程中止），再次运行该matlab脚本时，会出现如下报错：
 ```python
-ibprotobuf ERROR google/protobuf/descriptor_database.cc:57] File already exists in database: foo/foo.proto libprotobuf FATAL google/protobuf/descriptor.cc:862] CHECK failed: generated_database_->Add(encoded_file_descriptor, size):  terminate called after throwing an instance of 'google::protobuf::FatalException'   what():  CHECK failed: generated_database_->Add(encoded_file_descriptor, size): 
+# errors in Matlab:
+[libprotobuf ERROR google/protobuf/descriptor_database.cc:57] File already exists in database: caffe.proto
+[libprotobuf FATAL google/protobuf/descriptor.cc:954] CHECK failed: generated_database_->Add(encoded_file_descriptor, size): 
+
+# errors in terminal:
+Caught "std::exception" Exception message is:
+CHECK failed: generated_database_->Add(encoded_file_descriptor, size): 
+
 ```
 
-这个问题不仅仅是Matlab版的Faster RCNN中会出现，而且是在官方的BVLC/caffe中也同样存在，只要有多个程序同时运行时调用caffe，就会报上述错误。
+这个问题不仅仅是Matlab版的Faster RCNN中会出现，而且是在官方的BVLC/caffe中也同样存在，只要有多个程序同时运行时调用caffe，就会报上述`libprotobuf ERROR`错误。
 
 ## 问题原因
 原因是因为在Linux操作系统中，以Ubuntu14.04为例，在配置caffe的系统环境时需要安装Google的protobuf库，官网给出的安装方式为：
